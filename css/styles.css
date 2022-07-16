@@ -252,9 +252,10 @@ h1 {
   padding-bottom: 10px;
 }
 
-.modal-form-label-mod:nth-child(n + 5) {
+.modal-form-label-mod:nth-child(6) {
   padding-bottom: 30px;
   padding-top: 0x;
+  text-align: center;
 }
 .modal-form-format {
   display: flex;
@@ -285,6 +286,24 @@ h1 {
   width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+.modal-form-terms {
+  font-size: 14px;
+  line-height: 24px;
+
+  /* identical to box height, or 171% */
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+.modal-form-terms-link {
+  font-size: 14px;
+  line-height: 24px;
+
+  /* identical to box height, or 171% */
+  letter-spacing: 0.03em;
+  color: var(--links-color);
+  text-decoration: underline;
 }
 .modal-form-button-box {
   display: flex;

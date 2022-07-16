@@ -1,0 +1,635 @@
+body {
+  font-family: "Roboto", "Raleway", sans-serif;
+  background-color: #ffffff;
+  color: #212121;
+  width: 1600px;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+.container {
+  width: 1200px;
+  margin: auto;
+}
+/* POTEM DODAĆ WAŻNE: MNOŻNIK LINE HEIGHT= TO line-height/font-size */
+
+/* ustawienei najnizszego rzedu(4) do usuniecia bazowych marginesów we wszystkich elementach */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  transition-property: box-shadow, background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+/* zmienne globalne dla:kolorów tekstu,tła,zaznaczanie */
+:root {
+  --white-color: #ffffff;
+  --basic-text-color: #212121;
+  --main-baner-color: #2f303a;
+  --button-color: #2196f3;
+  --links-color: #2196f3;
+  --logo-color1: #2196f3;
+  --paragraph-link-content: #757575;
+  --logo-color2: black;
+  --header-text-color: #212121;
+  --button-bacground-portfolio: #f5f4fa;
+  --our-team-background: #f5f4fa;
+  --link-contact-footer: rgba(255, 255, 255, 0.6);
+  --portofolio-photo-background: #eeeeee;
+  --header-line-bottom-color: #ececec;
+  --icon-team-color: #afb1b8;
+  --icon-clients-background-color: #2196f3;
+}
+
+/* styl naglowka */
+header {
+  border-bottom: 1px solid var(--header-line-bottom-color);
+}
+.header-link-format {
+  padding-left: 93px;
+  padding-right: 345px;
+}
+.header-display-format {
+  display: flex;
+  padding-left: 15px;
+  align-items: center;
+  padding: 25px 0;
+}
+/* styl bazowy jako rodzic(linki z contentem, kontaktem i adresem --- przy okazji jest to priorytet (3) rzedu czyli .klasa */
+.header-social-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: flex;
+}
+/* Pseudoklasy w menu w celu zrobienia oddzielen pomiedzy opcjami */
+.header-link-mod:nth-child(n + 2) {
+  padding-left: 46px;
+}
+.header-contact-mod:nth-child(2) {
+  padding-left: 30px;
+}
+.header-social-link .link-info {
+  color: var(--basic-text-color);
+}
+/* styl z pseudoklasą hover: interakcja po najechaniu myszką czy klawiaturą */
+
+.header-social-link .link-info:hover,
+.header-social-link .link-info:focus,
+.header-social-link .link-contact:hover,
+.header-social-link .link-contact:focus {
+  color: var(--links-color);
+}
+.header-social-link .link-info:active {
+  color: var(--links-color);
+}
+.link-info:hover::after {
+  content: "";
+  display: flex;
+  height: 4px;
+  background-color: #2196f3;
+  position: absolute;
+  width: 100%;
+  top: 46px;
+}
+.header-social-link .link-contact {
+  color: var(--paragraph-link-content);
+}
+.header-social-link .link-contact:active {
+  color: var(--links-color);
+}
+.link-contact {
+  display: flex;
+  align-items: center;
+  fill: var(--paragraph-link-content);
+}
+.header-contact-icon {
+  display: flex;
+}
+.header-contact-icon1-box {
+  display: flex;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+.header-contact-icon2-box {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+.link-contact:hover {
+  fill: var(--links-color);
+}
+.icon-contact {
+  display: flex;
+}
+
+.logo {
+  width: 145px;
+  font-family: "Raleway";
+
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--logo-color2);
+}
+.logo .logo-part {
+  color: var(--logo-color1);
+}
+.logo .logo-part2 {
+  color: var(--white-color);
+}
+/* ----------------------STYLOWANIE SEKCJI------------------------ */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.activities {
+  padding-top: 0;
+}
+.team {
+  width: 1600px;
+  background-color: var(--our-team-background);
+}
+.solutions {
+  display: block;
+  text-align: center;
+  width: 1600px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.foot {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.advantages {
+}
+.clients {
+}
+/* ----------------------STYLOWANIE ZAWARTOŚCI STRONY MAIN------------------------ */
+
+/* -------styl głównego banerru z przyciskiem ----------------*/
+.main-button {
+  cursor: pointer;
+  padding: 10px 42px;
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.main-button-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+}
+.main-baner {
+  background-color: var(--main-baner-color);
+  background-image: linear-gradient(
+      rgba(46, 196, 255, 0.2) 1%,
+      rgba(0, 0, 0, 0.7) 99%
+    ),
+    url(../images/images_main/main-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: scroll;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 1600px;
+  padding: 200px 0;
+}
+h1 {
+  width: 696px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  color: var(--white-color);
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0px 0px 30px 0px;
+}
+.main-header-first {
+  display: flex;
+  justify-content: center;
+}
+/*------------------------- OKNO MODALNE MAINN BUTTON -----------------------*/
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 500ms linear, visibility 500ms linear,
+    opacity 500ms linear;
+}
+.modal {
+  display: flex;
+  position: absolute;
+
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--white-color);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*--------------------------- Styl glowneego paragrafu na stronie -----------------*/
+
+.main-advantages-photo {
+  width: 270px;
+  height: 120px;
+  background-color: var(--our-team-background);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.main-advantages-text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--paragraph-link-content);
+}
+.main-advantages-list {
+  display: flex;
+  justify-content: space-around;
+}
+.main-advantages-list li {
+  width: 270px;
+}
+.main-advantages-position {
+  display: flex;
+  width: 270px;
+  flex-direction: column;
+}
+/* styl dla naglowkow h1:w glownym miejscu strony, h2: podtytuły sekcji, h3: podtytuły paragrafu */
+
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+/*------------------------- Fortmatowanie contentu main dostepne usługi firmy-------------*/
+
+.main-header-second-content {
+  padding-bottom: 50px;
+  text-align: center;
+}
+.main-photo-content-format {
+  display: flex;
+  justify-content: space-around;
+}
+.main-content-img {
+  display: block;
+}
+
+.main-content-tag {
+  display: flex;
+  position: relative;
+  bottom: 70px;
+  padding: 27px 90px;
+  background-color: rgba(47, 48, 58, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+.main-content-tag p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.main-content-photo-container {
+  height: 294px;
+}
+/*-------------------------------- Formatowanie informacji o teamie-------------------- */
+.main-header-second-team {
+  padding-bottom: 50px;
+  text-align: center;
+}
+.main-photo-team-format {
+  display: flex;
+  justify-content: space-around;
+}
+.main-photo-team-background {
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.main-photo-team-icons {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0 32px 0;
+}
+.main-photo-team-icons-choose:nth-child(n + 2) {
+  padding-left: 10px;
+}
+.main-team-icon-background {
+  display: flex;
+  background-color: var(--white-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.icon-team {
+  padding: 12px;
+  fill: var(--icon-team-color);
+}
+.main-team-icon-background:hover,
+.main-team-icon-background:focus {
+  background-color: #2196f3;
+}
+.icon-team:hover,
+.icon-team:focus {
+  fill: var(--white-color);
+}
+/*------------------ Styl do nagłówków fotek */
+.main-photo-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1875;
+  text-align: center;
+
+  letter-spacing: 0.03em;
+  padding-top: 30px;
+}
+.main-photo-description {
+  font-size: 16px;
+  line-height: 1.1875;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--paragraph-link-content);
+
+  padding-top: 10px;
+}
+h3 {
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+/*--------------------------- STYLIZACJA SEKCJI: NASI KLIENCI------------------- */
+.main-clients-header-second {
+  padding-bottom: 50px;
+  text-align: center;
+}
+.main-clients-photo-background {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-team-color);
+  border-radius: 4px;
+}
+.main-clients-photo {
+  display: flex;
+  justify-content: space-around;
+}
+.main-clients-icon {
+  padding: 16px 32px 16px 32px;
+  fill: var(--icon-team-color);
+}
+.main-clients-photo-background:hover,
+.main-clients-photo-background:focus {
+  border-color: var(--icon-clients-background-color);
+  fill: var(--icon-clients-background-color);
+}
+.main-clients-icon:hover,
+.main-clients-icon:focus {
+  fill: var(--icon-clients-background-color);
+}
+/*------------------------------- Stylizacja stopki strony -----------------------*/
+footer {
+  width: 1600px;
+  height: 252px;
+  background: var(--main-baner-color);
+}
+
+.footer-social-link {
+  padding-top: 60px;
+}
+.footer-social-link .link-adres {
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+}
+
+.footer-logo-format {
+  display: flex;
+  padding-left: 15px;
+}
+.footer-logo-mod:nth-child(2) {
+  padding-top: 20px;
+}
+.footer-logo-mod:nth-child(n + 3) {
+  padding-top: 9px;
+}
+.footer-icon-mod {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.footer-icon-format {
+  padding-top: 72px;
+  padding-left: 70px;
+}
+.footer-icon {
+  padding: 12px;
+  fill: var(--white-color);
+}
+.footer-icon-background {
+  display: flex;
+  background-color: var(--white-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-icon-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.footer-icon-background:hover,
+.footer-icon-background:focus {
+  background-color: rgba(33, 150, 243, 1);
+}
+
+/* __________________________________________________________________ */
+/*------------------------------- STYLE DO PORTFOLIO  ---------------------------*/
+/* __________________________________________________________________ */
+.link-active {
+  color: #2196f3;
+}
+.link-active::after {
+  content: "";
+  display: flex;
+  height: 4px;
+  background-color: #2196f3;
+  position: absolute;
+  width: 100%;
+  top: 46px;
+}
+.button-portfolio {
+  cursor: pointer;
+  background-color: var(--button-bacground-portfolio);
+  border-radius: 4px;
+  border: none;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.875;
+
+  letter-spacing: 0.06em;
+  color: var(--basic-text-color);
+  padding: 6px 22px 6px 22px;
+}
+.button-portfolio:hover,
+.button-portfolio:focus {
+  background-color: var(--button-color);
+  color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.portfolio-button-format {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+  padding-bottom: 50px;
+}
+/*-------- stylizacja zdjęć w portfolio-------- */
+.portfolio-photo-background {
+  width: 370px;
+  background-color: var(--white-color);
+
+  display: block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.photo-title-portfolio {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+
+  letter-spacing: 0.06em;
+  padding: 20px 0px 4px 24px;
+}
+
+.photo-description-portfolio {
+  font-size: 16px;
+  line-height: 1.875;
+
+  letter-spacing: 0.03em;
+  color: var(--paragraph-link-content);
+  padding: 0px 0px 20px 24px;
+}
+.portfolio-photo-no-gap {
+  display: block;
+}
+.portfolio-photo-description-mod {
+  display: block;
+  border-bottom: 1px solid var(--portofolio-photo-background);
+  border-right: 1px solid var(--portofolio-photo-background);
+  border-left: 1px solid var(--portofolio-photo-background);
+  background-color: white;
+
+  z-index: 3;
+  position: relative;
+}
+
+.portfolio-photo-format {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.portfolio-photo-background:hover {
+  cursor: pointer;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-photo-background:hover .overlay {
+  transform: translatey(0);
+}
+.overlay {
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 294px;
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(100%);
+  transition: transform 250ms ease;
+  align-items: center;
+  justify-content: center;
+}
+.overlay p {
+  display: flex;
+  color: var(--white-color);
+  width: 301px;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  letter-spacing: 0.03em;
+}
+/* Stylowanie stopki w portfolio  */
+.link-contact-footer {
+  color: var(--link-contact-footer);
+
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+}
+.link-contact-footer:hover,
+.link-contact-footer:focus {
+  color: var(--links-color);
+}
+.link-contact-footer .link-mail-portfolio {
+  text-decoration: underline;
+}
+
+/* -------------STYLOWANIE SEKCJI PORTFOLIO------------------ */

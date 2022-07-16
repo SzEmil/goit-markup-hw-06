@@ -610,6 +610,56 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>X</button>
+        <!-- <div class="modal-format"> -->
+        <form
+          class="modal-form-format"
+          name="form_signup"
+          autocomplete="on"
+          novalidate
+        >
+          <div
+            class="modal-form-group"
+            role="group"
+            aria-labelledby="contact-details"
+          >
+            <h3 class="modal-form-header">
+              Zostaw swoje dane w formularzu poniżej
+            </h3>
+
+            <label class="modal-form-label-mod">
+              <p>Imie</p>
+              <input class="modal-form-input" type="text" name="name" />
+            </label>
+
+            <label class="modal-form-label-mod">
+              <p>Telefon</p>
+              <input class="modal-form-input" type="tel" name="telephone" />
+            </label>
+
+            <label class="modal-form-label-mod">
+              <p>Email</p>
+              <input class="modal-form-input" type="email" name="email" />
+            </label>
+
+            <label class="modal-form-label-mod">
+              <p>Komentarz</p>
+              <textarea
+                class="modal-form-textarea"
+                name="feedback"
+                rows="5"
+                placeholder="Wprowadź tekst"
+              ></textarea>
+            </label>
+
+            <label class="modal-form-label-mod">
+              <input type="checkbox" name="terms" />
+              Oświadczam iż akceptuję Regulamin i Politykę Prywatności.
+            </label>
+            <div class="modal-form-button-box">
+              <button class="modal-form-button" type="submit">Wyślij</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
 

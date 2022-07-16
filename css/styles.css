@@ -253,7 +253,7 @@ h1 {
 }
 
 .modal-form-label-mod:nth-child(6) {
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   padding-top: 0x;
   text-align: center;
 }
@@ -280,12 +280,20 @@ h1 {
   width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding: 12px;
 }
 .modal-form-textarea {
   resize: none;
   width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding: 12px 16px;
+
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
 .modal-form-terms {
   font-size: 14px;
@@ -308,6 +316,14 @@ h1 {
 .modal-form-button-box {
   display: flex;
   justify-content: center;
+  padding-top: 30px;
+}
+.modal-form-label-mod p {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: #757575;
 }
 .modal-form-button {
   color: var(--white-color);
@@ -318,6 +334,16 @@ h1 {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border: none;
   cursor: pointer;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+
+  transition: transform 500ms linear;
+}
+.modal-form-button:hover {
+  transform: scale(1.1);
 }
 .close-btn {
   position: absolute;
@@ -565,7 +591,70 @@ footer {
 .footer-icon-background:focus {
   background-color: rgba(33, 150, 243, 1);
 }
+.footer-form {
+  padding-left: 78px;
+  padding-top: 72px;
+}
+.footer-form p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.footer-form-format {
+  padding-top: 20px;
+}
+.footer-form-input {
+  padding: 15px 0px 15px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  width: 358px;
+  background-color: transparent;
 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-form-button-box {
+  padding-left: 12px;
+  padding-top: 36px;
+}
+.footer-form-button {
+  background-color: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 10px 24px 10px 42px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  fill: var(--white-color);
+
+  transition: transform 500ms linear;
+}
+.footer-form-button-svg {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  margin-left: 24px;
+}
+
+.footer-form-button:hover {
+  transform: scale(1.1);
+}
 /* __________________________________________________________________ */
 /*------------------------------- STYLE DO PORTFOLIO  ---------------------------*/
 /* __________________________________________________________________ */

@@ -292,14 +292,18 @@ h1 {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
-
+}
+.modal-form-textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-textarea:focus,
+.modal-form-input:focus {
+  border-color: var(--links-color);
 }
 .modal-form-terms {
   font-size: 14px;
   line-height: 24px;
 
-  /* identical to box height, or 171% */
   letter-spacing: 0.03em;
 
   color: #757575;
@@ -308,7 +312,6 @@ h1 {
   font-size: 14px;
   line-height: 24px;
 
-  /* identical to box height, or 171% */
   letter-spacing: 0.03em;
   color: var(--links-color);
   text-decoration: underline;
@@ -340,7 +343,7 @@ h1 {
   line-height: 30px;
   letter-spacing: 0.06em;
 
-  transition: transform 500ms linear;
+  transition: transform 200ms linear;
 }
 .modal-form-button:hover {
   transform: scale(1.1);

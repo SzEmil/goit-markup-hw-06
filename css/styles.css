@@ -250,8 +250,21 @@ h1 {
 
 .modal-form-label-mod {
   padding-bottom: 10px;
+  position: relative;
 }
+.modal-form-label-mod::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 18px;
 
+  background-image: url("./images/icons.svg#icon-user");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .modal-form-label-mod:nth-child(6) {
   padding-bottom: 0px;
   padding-top: 0x;
@@ -280,7 +293,7 @@ h1 {
   width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 12px;
+  padding: 12px 12px 12px 42px;
 }
 .modal-form-textarea {
   resize: none;
@@ -298,6 +311,7 @@ h1 {
 }
 .modal-form-textarea:focus,
 .modal-form-input:focus {
+  outline: none;
   border-color: var(--links-color);
 }
 .modal-form-terms {
@@ -629,8 +643,12 @@ footer {
 .footer-form-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
+.footer-form-input:required {
+  border-color: #f44336;
+}
 .footer-form-input:focus {
-  border-color: var(--button-color);
+  outline: none;
+  border-color: var(--links-color);
 }
 .footer-form-button-box {
   padding-left: 12px;

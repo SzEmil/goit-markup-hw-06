@@ -624,8 +624,13 @@ footer {
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;
-
+  color: var(--white-color);
+}
+.footer-form-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-form-input:focus {
+  border-color: var(--button-color);
 }
 .footer-form-button-box {
   padding-left: 12px;
@@ -646,7 +651,7 @@ footer {
   align-items: center;
   fill: var(--white-color);
 
-  transition: transform 500ms linear;
+  transition: transform 100ms linear;
 }
 .footer-form-button-svg {
   width: 24px;

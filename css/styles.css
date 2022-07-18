@@ -260,16 +260,26 @@ h1 {
   bottom: 0;
   width: 18px;
 
-  background-image: url("./images/icons.svg#icon-user");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+
+}
+.modal-form-label-mod:nth-child(2)::before {
+  background-image: url(/images/images_main/user.svg);
+}
+.modal-form-label-mod:nth-child(3)::before {
+  background-image: url(/images/images_main/phone.svg);
+}
+.modal-form-label-mod:nth-child(4)::before {
+  background-image: url(/images/images_main/mail-icon.svg);
 }
 .modal-form-label-mod:nth-child(6) {
   padding-bottom: 0px;
   padding-top: 0x;
   text-align: center;
 }
+
 .modal-form-format {
   display: flex;
   flex-direction: column;

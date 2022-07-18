@@ -235,8 +235,8 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  transition: transform 500ms linear, visibility 500ms linear,
-    opacity 500ms linear;
+  transition: transform 250ms linear, visibility 250ms linear,
+    opacity 250ms linear;
 }
 .modal {
   display: flex;
@@ -246,6 +246,8 @@ h1 {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 300ms linear, visibility 300ms linear,
+    opacity 300ms linear;
 }
 
 .modal-form-label-mod {
@@ -263,16 +265,14 @@ h1 {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-
 }
-.modal-form-label-mod:nth-child(2)::before {
-  background-image: url(/images/images_main/user.svg);
+.modal-form-label-svg {
+  position: absolute;
+  bottom: 22px;
+  left: 12px;
 }
-.modal-form-label-mod:nth-child(3)::before {
-  background-image: url(/images/images_main/phone.svg);
-}
-.modal-form-label-mod:nth-child(4)::before {
-  background-image: url(/images/images_main/mail-icon.svg);
+.modal-form-label-mod:focus-within {
+  fill: #2196f3;
 }
 .modal-form-label-mod:nth-child(6) {
   padding-bottom: 0px;
@@ -388,9 +388,14 @@ h1 {
   pointer-events: none;
 }
 
-/*--------------------------- Styl glowneego paragrafu na stronie -----------------*/
-
-.main-advantages-photo {
+-------------------------
+  Styl
+  glowneego
+  paragrafu
+  na
+  stronie
+  -----------------*/
+  .main-advantages-photo {
   width: 270px;
   height: 120px;
   background-color: var(--our-team-background);

@@ -266,6 +266,7 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .modal-form-label-svg {
   position: absolute;
   bottom: 22px;
@@ -388,14 +389,8 @@ h1 {
   pointer-events: none;
 }
 
--------------------------
-  Styl
-  glowneego
-  paragrafu
-  na
-  stronie
-  -----------------*/
-  .main-advantages-photo {
+/* -------------------------Styl glowneego paragrafu na stronie----------------- */
+.main-advantages-photo {
   width: 270px;
   height: 120px;
   background-color: var(--our-team-background);

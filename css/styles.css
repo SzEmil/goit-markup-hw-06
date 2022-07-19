@@ -618,9 +618,11 @@ footer {
 .footer-icon-background:focus {
   background-color: rgba(33, 150, 243, 1);
 }
+
 .footer-form {
   padding-left: 78px;
   padding-top: 72px;
+  display: flex;
 }
 .footer-form p {
   font-weight: 700;
@@ -653,16 +655,20 @@ footer {
 .footer-form-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-.footer-form-input:required {
-  border-color: #f44336;
+.footer-form-input:not(:placeholder-shown):required:valid {
+  border-color: green;
 }
 .footer-form-input:focus {
   outline: none;
   border-color: var(--links-color);
 }
+.footer-form-button-format {
+  display: flex;
+  flex-direction: row;
+}
 .footer-form-button-box {
   padding-left: 12px;
-  padding-top: 36px;
+  padding-top: 20px;
 }
 .footer-form-button {
   background-color: var(--button-color);

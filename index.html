@@ -706,21 +706,25 @@
               ></textarea>
             </label>
 
-            <label class="modal-form-label-mod">
-              <input
-                class="modal-form-checkbox"
-                type="checkbox"
-                name="terms"
-                required
-              />
-              <a class="modal-form-terms"
-                >Oświadczam iż akceptuję
-                <a href="" class="modal-form-terms-link">Regulamin</a> i
-                <a href="" class="modal-form-terms-link"
-                  >Politykę Prywatności.</a
-                ></a
-              >
-            </label>
+            <div class="checkbox-container">
+              <input class="checkbox-input" id="tick-box" type="checkbox" />
+              <label class="checkbox" for="tick-box">
+                <span>
+                  <svg width="12px" height="10px">
+                    <use href="./images/icons.svg#check"></use>
+                  </svg>
+                </span>
+                <span>
+                  <a class="modal-form-terms"
+                    >Oświadczam iż akceptuję
+                    <a href="" class="modal-form-terms-link">Regulamin</a> i
+                    <a href="" class="modal-form-terms-link"
+                      >Politykę Prywatności.</a
+                    ></a
+                  >
+                </span>
+              </label>
+            </div>
             <div class="modal-form-button-box">
               <button class="modal-form-button" type="submit">Wyślij</button>
             </div>

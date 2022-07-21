@@ -184,6 +184,11 @@ header {
   background: var(--button-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  transition: transform 100ms linear;
+}
+.main-button:hover {
+  transform: scale(1.1);
 }
 .main-button-text {
   font-weight: 700;
@@ -384,36 +389,84 @@ h1 {
   cursor: pointer;
 }
 
-.modal-form-checkbox {
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.checkbox-input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.checkbox {
+  user-select: none;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox:hover {
+  background: rgba(0, 119, 255, 0.06);
+}
+
+.checkbox span {
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox span:first-child {
+  position: relative;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  transform: scale(1);
+  border: 1px solid #cccfdb;
+  transition: all 0.3s ease;
+}
+
+.checkbox span:first-child svg {
   position: absolute;
   top: 3px;
-  appearance: none;
-  background-color: var(--white-color);
-  font: inherit;
-  color: currentColor;
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  border-radius: 0.15em;
-
-  display: grid;
-  place-content: center;
-}
-.modal-form-checkbox::before {
-  content: "";
-  width: 0.65em;
-  height: 0.65em;
-  transform: scale(0);
-  transition: 250ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--links-color);
-
-  transform-origin: bottom left;
-  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-}
-.modal-form-checkbox:checked::before {
-  transform: scale(1);
+  left: 2px;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transform: translate3d(0, 0, 0);
 }
 
+.checkbox span:last-child {
+  padding-left: 8px;
+  line-height: 18px;
+}
+
+.checkbox:hover span:first-child {
+  border-color: #0077ff;
+}
+
+.checkbox-input:checked + .checkbox span:first-child {
+  background: #0077ff;
+  border-color: #0077ff;
+  animation: zoom-in-out 0.3s ease;
+}
+
+.checkbox-input:checked + .checkbox span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+@keyframes zoom-in-out {
+  50% {
+    transform: scale(0.9);
+  }
+}
 .is-hidden {
   opacity: 0;
   visibility: hidden;

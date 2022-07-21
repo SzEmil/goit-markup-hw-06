@@ -606,13 +606,14 @@
           <div class="footer-form">
             <div>
               <p>Zapisz się do newslettera</p>
-              <div class="footer-form-button-format">
-                <form
-                  class="modal-form-format"
-                  name="form_mail_footer"
-                  autocomplete="on"
-                >
-                  <label class="footer-form-format">
+
+              <form
+                class="modal-form-format"
+                name="form_mail_footer"
+                autocomplete="on"
+              >
+                <div class="footer-form-format">
+                  <label>
                     <input
                       class="footer-form-input"
                       type="email"
@@ -621,22 +622,22 @@
                       required
                     />
                   </label>
-                </form>
-                <div class="footer-form-button-box">
-                  <button class="footer-form-button" type="submit">
-                    Zapisz się
-                    <div class="footer-form-button-svg">
-                      <svg
-                        class="footer-form-button-svg-format"
-                        width="24"
-                        height="24"
-                      >
-                        <use href="./images/icons.svg#icon-compass"></use>
-                      </svg>
-                    </div>
-                  </button>
+                  <div class="footer-form-button-box">
+                    <button class="footer-form-button" type="submit">
+                      Zapisz się
+                      <div class="footer-form-button-svg">
+                        <svg
+                          class="footer-form-button-svg-format"
+                          width="24"
+                          height="24"
+                        >
+                          <use href="./images/icons.svg#icon-compass"></use>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -706,7 +707,12 @@
             </label>
 
             <label class="modal-form-label-mod">
-              <input class="modal-form-checkbox" type="checkbox" name="terms" required />
+              <input
+                class="modal-form-checkbox"
+                type="checkbox"
+                name="terms"
+                required
+              />
               <a class="modal-form-terms"
                 >Oświadczam iż akceptuję
                 <a href="" class="modal-form-terms-link">Regulamin</a> i

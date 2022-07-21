@@ -20,7 +20,7 @@ body {
   text-decoration: none;
   box-sizing: border-box;
 
-  transition-property: box-shadow, background-color, fill, color;
+  transition-property: box-shadow, background-color, fill, color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -277,7 +277,7 @@ h1 {
 }
 .modal-form-label-mod:nth-child(6) {
   padding-bottom: 0px;
-  padding-top: 0x;
+  padding-top: 0px;
   text-align: center;
 }
 
@@ -633,6 +633,8 @@ footer {
 }
 .footer-form-format {
   padding-top: 20px;
+  display: flex;
+  flex-direction: row;
 }
 .footer-form-input {
   padding: 15px 0px 15px 16px;
@@ -661,13 +663,9 @@ footer {
   outline: none;
   border-color: var(--links-color);
 }
-.footer-form-button-format {
-  display: flex;
-  flex-direction: row;
-}
 .footer-form-button-box {
   padding-left: 12px;
-  padding-top: 20px;
+  display: flex;
 }
 .footer-form-button {
   background-color: var(--button-color);
@@ -676,7 +674,7 @@ footer {
   border: none;
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
+  line-height: calc(30 / 16);
   color: #ffffff;
   padding: 10px 24px 10px 42px;
   cursor: pointer;
